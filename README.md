@@ -3,13 +3,16 @@ This work involves developing an LSTM (Long Short-Term Memory) model to predict 
 Short Paper Summary: LSTM Model for Predicting Methane Values
 Introduction
 
-Data Preparation
+**Data Preparation**
 The methane emission data is prepared using a window method, where each set of past values predicts the next value. The data is then split into training, validation, and test sets.
-Hyperparameter Optimization
+
+**Hyperparameter Optimization**
 Used GridSearchCV tool to optimize key hyperparameters, including the number of neurons, LSTM units, window size, number of layers, and learning rate. The best-performing model is selected based on the lowest mean squared error.
-Results
+
+**Results**
 The grid search identifies the optimal configuration of the model for methane emission prediction. The final model achieves competitive performance in predicting future methane values, demonstrating the efficacy of LSTM networks in time-series forecasting.
-Best Parameters:
+
+**Best Parameters:**
 Activation Function: ReLU
 Learning Rate (Adam Optimizer): 0.001
 LSTM Units: 128
@@ -18,6 +21,7 @@ Number of Neurons per Dense Layer: 128
 Window Size: 5
 Best Score: -905.65
 
+**What is an LSTM**
 An LSTM is a type of recurrent neural network (RNN). An RNN is a neural network containing loops that allows information to persist rather than be forgotten about, allowing the model to output a value based on recent info. However, an LSTM has the ability to store long term information, hence the name (Long-Short Term Memory).
 
 The cell-state is the core idea behind the LSTM. It is a dedicated memory pathway that runs along the chain of the neural network, allowing information to flow along it unchanged, enabling the model to retain a memory of important information across long sequences. However, the cell-state can be modified with the use of three gates, allowing info to be removed or added.
